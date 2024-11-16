@@ -16,7 +16,7 @@ def get_business_expert_query(theme, user_answer):
         13. Ideas with terrible profits get a budget value between £0 and £200.
         14. Ideas with poor profits get a budget value between £200 and £400.
         15. Ideas with reasonable profits get a budget value between £400 and £600.
-        16. Ideas wirg good profits get a budget value between £600 and £800.
+        16. Ideas with good profits get a budget value between £600 and £800.
         17. Ideas with very good profits get a budget value between £800 and £1000.
         18. You must invest an amount in one of these ranges.
         19. Do not mention your investment figure in your thoughts "response".

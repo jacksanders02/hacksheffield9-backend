@@ -13,7 +13,7 @@ def get_child_query(theme, user_answer):
         10. Ideas with terrible humour get a budget value between £0 and £200.
         11. Ideas with poor humour get a budget value between £200 and £400.
         12. Ideas with reasonable humour get a budget value between £400 and £600.
-        13. Ideas wirg good humour get a budget value between £600 and £800.
+        13. Ideas with good humour get a budget value between £600 and £800.
         14. Ideas with very good humour get a budget value between £800 and £1000.
         15. You must invest an amount in one of these ranges.
         16. Do not mention your investment figure in your thoughts "response".
