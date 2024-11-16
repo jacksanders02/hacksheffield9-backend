@@ -26,7 +26,6 @@ def get_all_queries(theme, user_answer):
   print('--------------------------------------------------------------------------------------------')
 
 
-
 theme = "bank accounts for polar bears"
 answer = "Open a natwest branch in the arctic circle and use fish currency. I will charge high interest to make profits."
 
