@@ -17,21 +17,16 @@ def get_all_queries(theme, user_answer):
   print(user_answer)
   print('---------------------------------- Countess of Crookes -------------------------------------')
   print(agent1)
-
-  print('--------------------------------- Brian From The Pub ---------------------------------------')
+  print('----------------------------------- Dave From The Pub --------------------------------------')
   print(agent2)
 
-  print('--------------------------- Sue Stainability and Ian Clusivity -----------------------------')
+  print('------------------------ Sue Stainability (Sister of Ian Clusivity) ------------------------')
   print(agent3)
 
   print('--------------------------------------- Tiny Tim -------------------------------------------')
   print(agent4)
   print('############################################################################################')
 
-
-# theme = "bank accounts for polar bears"
-# answer = "Open a natwest branch in the arctic circle and use fish currency. I will charge high interest to make profits."
-# get_all_queries(theme, answer)
 
 def main():
   while True:
