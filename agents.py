@@ -9,24 +9,38 @@ def get_all_queries(theme, user_answer):
   agent2 = llm.complete(personalities.get_random_bloke_query(theme, user_answer))
   agent3 = llm.complete(personalities.get_sustainability_inclusivity_query(theme, user_answer))
   agent4 = llm.complete(personalities.get_child_query(theme, user_answer))
-  
-  print('--------------------------------------------------------------------------------------------')
-  print('---------------------------------Countess of Crookes----------------------------------------')
+
+  print('############################################################################################')
+  print('---------------------------------------- Theme ---------------------------------------------')
+  print(theme)
+  print('-------------------------------------- User Answer -----------------------------------------')
+  print(user_answer)
+  print('---------------------------------- Countess of Crookes -------------------------------------')
   print(agent1)
-  print('--------------------------------------------------------------------------------------------')
-  print('----------------------------------Brian From The Pub----------------------------------------')
+
+  print('--------------------------------- Brian From The Pub ---------------------------------------')
   print(agent2)
-  print('--------------------------------------------------------------------------------------------')
-  print('----------------------------Sue Stainability and Ian Clusivity------------------------------')
+
+  print('--------------------------- Sue Stainability and Ian Clusivity -----------------------------')
   print(agent3)
-  print('--------------------------------------------------------------------------------------------')
-  print('----------------------------------------Tiny Tim--------------------------------------------')
+
+  print('--------------------------------------- Tiny Tim -------------------------------------------')
   print(agent4)
-  print('--------------------------------------------------------------------------------------------')
-  print('--------------------------------------------------------------------------------------------')
+  print('############################################################################################')
 
 
-theme = "bank accounts for polar bears"
-answer = "Open a natwest branch in the arctic circle and use fish currency. I will charge high interest to make profits."
+# theme = "bank accounts for polar bears"
+# answer = "Open a natwest branch in the arctic circle and use fish currency. I will charge high interest to make profits."
+# get_all_queries(theme, answer)
 
-get_all_queries(theme, answer)
+def main():
+  while True:
+    input_theme = input("Theme: ")
+    if input_theme.lower() == "quit":
+      break 
+    user_answer = input("Answer: ")
+    if user_answer.lower() == "quit":
+      break
+    get_all_queries(input_theme, user_answer)
+
+main()
