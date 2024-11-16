@@ -1,6 +1,13 @@
 from llama_index.llms.ollama import Ollama
 import personalities
 
+PERSON_TO_AGENT = {
+    "countess": personalities.get_business_expert_query,
+    "dave": personalities.get_random_bloke_query,
+    "sue": personalities.get_sustainability_inclusivity_query,
+    "child": personalities.get_child_query
+}
+
 # Setup model
 llm = Ollama(base_url="localhost:11434", model="gemma2")
 
@@ -27,7 +34,6 @@ def get_all_queries(theme, user_answer):
   print(agent4)
   print('############################################################################################')
 
-
 def main():
   while True:
     input_theme = input("Theme: ")
@@ -38,4 +44,6 @@ def main():
       break
     get_all_queries(input_theme, user_answer)
 
-main()
+def get_response(person: str, theme: str, answer: str):
+    query_fun = PERSON_TO_AGENT[person.lower()]
+    return llm.complete(query_fun(theme, answer))
