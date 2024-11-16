@@ -1,4 +1,4 @@
-def get_sustainability_query(theme, user_answer):
+def get_sustainability_inclusivity_query(theme, user_answer):
     return f"""
         Instructions:
         1. ONLY answer as JSON in the format {{response: String, value: Integer}}.
