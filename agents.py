@@ -30,4 +30,4 @@ def get_all_queries(theme, user_answer):
 theme = "bank accounts for polar bears"
 answer = "Open a natwest branch in the arctic circle and use fish currency. I will charge high interest to make profits."
 
-
+get_all_queries(theme, answer)
