@@ -1,3 +1,5 @@
+import random
+
 from pusher_controller import run_pusher
 
 
@@ -32,7 +34,26 @@ THEMES = [
     "Suits for babies",
     "Worm smoothies",
     "Boats made out of cheese",
-    "Cars made entirely out of glass"
+    "Cars made entirely out of glass",
+    "Worm Smoothies",
+    "Tuxedos for babies",
+    "Fedoras for dogs",
+    "Stickbug rental service",
+    "Mystery Meat Burgers",
+    "Rubber subscription service",
+    "WiFi enabled lipstick",
+    "Anchovy flavour crisps",
+    "Nitro-boost Tricycles",
+    "Weighted socks",
+    "Left-handed pens",
+    "Glow in the dark shoelaces",
+    "Wine Flavoured Beer",
+    "Single-use records",
+    "Zero-energy energy drinks",
+    "Pygmy Pineapples",
+    "“New Car Smell” Deodorant",
+    "A bank for polar bears",
+    "Books written by typewriting monkeys"
 ]
 pusher_client = run_pusher()
 
@@ -87,13 +108,14 @@ def ready_user(username, room_code):
     return get_room_from_code(room_code).users[username].ready
 
 def get_current_room_theme(room_code):
-    current_round = get_room_from_code(room_code).round
-    return THEMES[current_round - 1]
+    # current_round = get_room_from_code(room_code).round
+    return THEMES[random.randint(0, len(THEMES) - 1)]
 
 def advance_room_round(room_code):
     get_room_from_code(room_code).round += 1
-    if get_room_from_code(room_code).round > NUM_ROUNDS:
-        return -1
+    # if get_room_from_code(room_code).round > NUM_ROUNDS:
+    #     get_room_from_code(room_code).round = 0
+    #     return -1
     return get_room_from_code(room_code).round
 
 def add_user_answer(username, room_code, answer):

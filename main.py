@@ -69,7 +69,6 @@ def ready_up(room_code, username):
 
 @app.get("/room/{room_code}/theme")
 def get_room_theme(room_code):
-    validate_room(room_code)
     return get_current_room_theme(room_code)
 
 @app.get("/room/{room_code}/advance-round")
